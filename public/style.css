@@ -1,0 +1,21 @@
+
+table {
+border: 1px solid black;
+width: 80%;
+}
+th, td {
+border: 1px solid black;
+text-align: center;
+}
+
+h1 {
+    font-size:x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:purple;
+}
+
+body {
+    background-color: rgba(243, 242, 139, 0.897);
+}
+
+ 

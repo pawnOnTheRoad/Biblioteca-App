@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Socios</title>
+    <link href="/public/style.css" rel="stylesheet">
+</head>
+<body>
+    <table>
+        <caption>Socios</caption>
+        <thead>
+            <tr>
+                <th>Socio-ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>E-Mail</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+<script>
+    let url = 'http://localhost:3000/mostrarsociosjson'
+    fetch(url)
+    .then (response => response.json())
+    .then (data => mostrarData(data))
+
+    let mostrarData = (data) =>{
+        console.log (data);
+        let body = ''
+        for (let i = 0; i < data.length; i++){
+            body += `<tr><td>${data[i].Socio_ID}</td><td>${data[i].Nombre}</td><td>${data[i].Apellido}</td><td>${data[i].Direccion}</td><td>${data[i].Telefono}</td><td>${data[i].E_Mail}</td></tr>`
+        }
+        document.getElementById('data').innerHTML = body;
+    }
+</script>  
+</body>
+</html>

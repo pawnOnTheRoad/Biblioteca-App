@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=”UTF-8″ />
+    <title>Ingreso Libros</title>
+    <link href="/public/style.css" rel="stylesheet">
+</head>
+<body>
+<div> <h1 id="identificador">Ingreso  Libros</h1></div>
+<!--Notese que hay un espacio de mas en Ingreso  Libros
+es para que la length sea diferente de ingresos socios,
+no me gusta mucho esto voy a intentar cambiarlo-->
+<br>
+<div>
+<form action="/libros" method="post">
+<label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" name="nombre">
+    <br>
+<label for="autor">Autor: </label>
+    <input type="text" id="autor" name="autor">
+    <br>
+<label for="stock">Stock: </label>
+    <input type="number" id="stock" name="stock">
+    <br>
+<label for="ubicacion">Ubicación: </label>
+    <input type="text" id="ubicacion" name="ubicacion">
+    <br>
+<button type="submit">ENVIAR FORMULARIO</button>
+</form>
+</div>
+<br>
+<div id="formBody"></div>
+<script type="module" src="/public/armaForm.js"></script> 
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos Históricos</title>
+    <link href="public/style.css" rel="stylesheet">
+</head>
+<body>
+    <table>
+        <caption>Préstamos Históricos</caption>
+        <thead>
+            <tr>
+                <th>PréstamoID</th>
+                <th>Usuario ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Libro</th>
+                <th>Fecha Devolución</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+<script>
+    let url = "http://localhost:3000/prestamoshistoricosjson"
+    fetch(url)
+    .then(response => response.json())
+    .then(data => mostrarData(data))
+
+    const mostrarData = (data)=>{
+        console.log(data);
+        let body = '';
+
+        for (let i = 0; i<data.length; i++){
+            body += `<tr><td>${data[i].Prestamo_ID}</td>
+                      <td>${data[i].Socio_ID}</td>
+                      <td>${data[i].Nombre}</td>
+                      <td>${data[i].Apellido}</td>
+                      <td>${data[i].LibroDevuelto}</td>
+                      <td>${data[i].Fecha}</td>
+                    </tr>`
+        }
+
+        document.getElementById('data').innerHTML = body;
+        
+    }
+</script>
+    
+</body>
+</html>

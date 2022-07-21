@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos</title>
+    <link href="public/style.css" rel="stylesheet">
+</head>
+<body>
+<div><h1>Préstamos</h1></div>
+<br>
+<div>
+    <form action="/prestamos" method="post">
+        <label for="socio_id">Socio-ID</label>
+        <input type="number" id="socio_id" name="socio_id" required autocomplete="off">
+        <label for="libro_id">Libro-ID</label>
+        <input type="number" id="libro_id" name="libro_id" required autocomplete="off">
+        <button type="submit">Prestar Libro</button>
+    </form>  
+</div>
+<br>
+<br>
+<div>
+    <form>
+        <a href="http://localhost:3000/mostrarprestamos">
+          <input type="button" value="Mostrar Préstamos">
+        </a>
+    </form>
+  </div>
+    <br>
+    <br>
+  <div>
+    <form>
+      <a href="http://localhost:3000/devolucionprestamos">
+        <input type="button" value="Devolución Préstamos">
+      </a>
+    </form>
+  </div>
+  <br>
+  <br>
+  <div>
+      <form>
+        <a href="http://localhost:3000/prestamoshistoricos">
+          <input type="button" value="Préstamos Históricos">
+        </a>
+      </form>
+  </div>
+
+</body>
+</html>
