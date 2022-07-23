@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar libro</title>
+    <link href="public/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Editar libro</h1>
+    <div>
+        <p1>Se permite editar la ubicación en la biblioteca y el stock.</p1>
+        <br>
+        <p1>En el caso del stock hay que ingresar el número de copias nuevas que ingresan en la biblioteca</p1>
+    </div>
+    <br>
+    <div>
+    <form action="/editarlibros" method="post">
+        <label for="libro_id">Libro-ID</label>
+        <input type="number" id="libro_id" name="libro_id" required>
+        <br>
+        <br>
+        <label for="nuevostock">Cantidad de Copias Nuevas:</label>
+        <input type="number" id="nuevostock" name="nuevostock">
+        <br>
+        <br>
+        <label for="nuevaubicacion">Nueva ubicación:</label>
+        <input type="text" id="nuevaubicacion" name="nuevaubicacion">
+        <br>
+        <br>
+        <button type="submit">Editar</button>
+    </form>
+    </div>
+    
+</body>
+</html>
