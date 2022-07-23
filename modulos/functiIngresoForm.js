@@ -12,7 +12,7 @@ function ingresoForm (url,app,con){
               stock: req.body.stock,
               ubicacion: req.body.ubicacion   
           };
-          sql = `INSERT INTO Libros (Nombre, Autor, Stock, Stock_Disponible, Ubicacion) VALUES ("${body2.nombre}","${body2.autor}",${body2.stock},${body2.stock},"${body2.ubicacion}")`;
+          sql = `INSERT INTO Libros (Nombre, Autor, Stock, Stock_Disponible, Ubicacion) VALUES ("${body2.nombre}","${body2.autor}",${body2.stock},${body2.stock},"${body2.ubicacion}");`;
           send = send[0];
           break;
     

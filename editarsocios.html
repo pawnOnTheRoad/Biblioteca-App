@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar socios</title>
+    <link href="public/style.css" rel="stylesheet">
+</head>
+<body>
+<div><h1>Editar Socio</h1></div>
+<div><p1>Se permite editar dirección, teléfono y correo electrónico de los socios</p1></div>   
+<br>
+<div>
+    <form action="/editarsocios" method="post">
+        <label for="socio_id">Socio-ID</label>
+        <input type="number" id="socio_id" name="socio_id" required>
+        <br>
+        <br>
+        <label for="nuevadireccion">Dirección nueva:</label>
+        <input type="text" id="nuevadireccion" name="nuevadireccion">
+        <br>
+        <br>
+        <label for="nuevotelefono">Nuevo teléfono:</label>
+        <input type="text" id="nuevotelefono" name="nuevotelefono">
+        <br>
+        <br>
+        <label for="nuevocorreo">Nuevo correo electrónico</label>
+        <input type="text" id="nuevocorreo" name="nuevocorreo">
+        <br>
+        <br>
+        <button type="submit">Editar</button>
+    </form>
+    </div>
+</body>
+</html>
