@@ -4,7 +4,7 @@ También maneja el stock de libros al realizar un préstamo y al devolverlo.
 Para su funcionamiento es necesario tener mysql instalado. También descargar los módulos express y mysql2 de node JS
 La aplicación aún no está terminada. Los próximos objetivos son:
 
-- incluir la posiblidad de editar los ingresos de libros y socios.
+- incluir la posiblidad de editar los ingresos de libros y socios. ¡Realizado!
 - que al utilizar la función "buscar" los resultados sean mostrados en una tabla html (por el momento se presentan en json).
 - reducir la cantidad de archivos html. Me parece que se podría tener un archivo html para todas las secciones mostrar y no 3 html diferenciados como ahora.
 - mejorar la estética de la app, aplicando estilos.
