@@ -1,13 +1,13 @@
  module.exports = {
     con:{
     host: 'localhost',
-    user://your user,
-    password: //your password,
+    user: 'root',
+    password: 'Egiptoroma85',
     multipleStatements: true},
     conActualizada:{
     host: 'localhost',
-    user: //your user,
-    password: //your password,
+    user: 'root',
+    password: 'Egiptoroma85',
     database: 'BibliotecaApp',
     multipleStatements: true
   }

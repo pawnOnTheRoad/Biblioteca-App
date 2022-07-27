@@ -7,7 +7,7 @@ const functiGetSendFile = require('./modulos/functiGetSendFile');
 const functiBorrarRegistros = require('./modulos/functiBorrarRegistros');
 const functiIngresoForm = require ('./modulos/functiIngresoForm');
 const functijson = require ('./modulos/functiJson');
-const functiBuscar = require ('./modulos/functiBuscar');
+const functiBuscar = require ('./modulos/functiBuscar2');
 const functiEditar = require ('./modulos/functiEditar')
 const conexiones = require('./public/conexiones');
 
@@ -93,6 +93,10 @@ functijson ('/prestamoshistoricosjson', app,con);
 app.get('/modulos/functionCreaForm.js',(req,res)=>{
   res.sendFile(__dirname + '/modulos/functionCreaForm.js');
 })
+
+app.get('/modulos/functionBuscar.js',(req,res)=>{
+  res.sendFile(__dirname + '/modulos/functionBuscar.js');
+});
 
 //Servidor Iniciado
 

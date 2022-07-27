@@ -8,13 +8,68 @@
     <link href="public/style.css" rel="stylesheet">
 </head>
 <body>
-    <p1>Buscar Socio</p1>
+    <p1 id="identificador">Buscar Socio</p1>
     <br>
     <br>
-    <form action="/buscarsocio?" method="get" >
+    
         <label for="apellido">Apellido</label>
         <input type="text" id="apellido" name="apellido">
-        <button type="submit">Buscar</button>
-    </form>    
+        <button id='target'type="button">Buscar</button>
+    <br>
+    <div id="table" style="opacity:0;">
+    <table>
+        <caption>Búsqueda Socio</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+        </tbody>
+    </table>
+    </div>
+<script>/*
+    function buscar(){
+        let apellido = document.getElementById('apellido').value;
+        let url = 'http://localhost:3000/mostrarsociosjson'
+        fetch(url)
+        .then (response => response.json())
+        .then (data => mostrarData(data))
+
+        let arrayBusqueda = []
+        let mostrarData = (data)=>{
+            for (let i =0; i<data.length; i++){
+                let dataApellido = data[i].Apellido;
+                if (dataApellido.includes(apellido)){
+                    arrayBusqueda.push(data[i]);
+                }    
+            }
+            let body = ''
+        for (let i = 0; i < arrayBusqueda.length; i++){
+            body += `<tr><td>${arrayBusqueda[i].Socio_ID}</td><td>${arrayBusqueda[i].Nombre}</td><td>${arrayBusqueda[i].Apellido}</td><td>${arrayBusqueda[i].Direccion}</td><td>${arrayBusqueda[i].Telefono}</td><td>${arrayBusqueda[i].E_Mail}</td></tr>`
+        }
+        document.getElementById('data').innerHTML = body;
+        console.log(arrayBusqueda);
+        
+        if (arrayBusqueda.length > 0){
+        let table =document.getElementById('table')
+        table.style.opacity = 1;
+        }
+        else { table.style.opacity = 0;
+        alert('No hay resultados');    
+        };
+        
+      
+        }
+        
+    }*/
+    
+</script>
+<script type="module" src="/public/buscar.js"></script> 
 </body>
 </html>
