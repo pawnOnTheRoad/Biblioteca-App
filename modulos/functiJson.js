@@ -3,7 +3,7 @@ function json (url,app,con){
         let sql
         switch (url){
             case '/mostrarprestamosjson':
-                sql = 'SELECT Prestamos.Prestamo_ID, Prestamos.Socio_ID, Socios.Apellido, Libros.Nombre AS Libro from Prestamos INNER JOIN Socios ON Prestamos.Socio_ID = Socios.Socio_ID INNER JOIN Libros ON Prestamos.Libro_ID = Libros.Libro_ID;'
+                sql = 'SELECT Prestamos.Prestamo_ID, Prestamos.Socio_ID, Prestamos.Fecha, Socios.Nombre, Socios.Apellido, Libros.Nombre AS Libro from Prestamos INNER JOIN Socios ON Prestamos.Socio_ID = Socios.Socio_ID INNER JOIN Libros ON Prestamos.Libro_ID = Libros.Libro_ID;'
             break;
             case '/mostrarlibrosjson':
                 sql = 'SELECT * from Libros';

@@ -22,10 +22,9 @@
 <br>
 <br>
 <div>
-    <form>
-        <a href="http://localhost:3000/mostrarprestamos">
-          <input type="button" value="Mostrar Préstamos">
-        </a>
+    <form action="/mostrar" method="get">
+        <input hidden name="seccion" value="mostrarprestamos">
+        <button>Mostrar préstamos</button>
     </form>
   </div>
     <br>
@@ -33,17 +32,16 @@
   <div>
     <form>
       <a href="http://localhost:3000/devolucionprestamos">
-        <input type="button" value="Devolución Préstamos">
+      <input type="button" value="Devolución Préstamos">
       </a>
     </form>
   </div>
   <br>
   <br>
   <div>
-      <form>
-        <a href="http://localhost:3000/prestamoshistoricos">
-          <input type="button" value="Préstamos Históricos">
-        </a>
+      <form action="http://localhost:3000/mostrar" method="get">
+        <input hidden id = "prestamoshistoricos" name="seccion" value="prestamoshistoricos">
+        <button type="submit">Préstamos Históricos</button>
       </form>
   </div>
 
