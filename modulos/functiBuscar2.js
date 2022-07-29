@@ -1,3 +1,5 @@
+//no sirve más me parece chequear
+
 function buscar(url,app,con){
     app.get(url, (req,res)=>{
         let sql

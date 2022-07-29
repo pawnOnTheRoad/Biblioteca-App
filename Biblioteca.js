@@ -47,12 +47,15 @@ app.get('/',(req,res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
+//Ruta mostrar
+functiGetSendFile ('mostrar',app,__dirname);
+
 //Rutas Libros
 functiGetSendFile ('libros',app,__dirname);
-functiGetSendFile ('mostrarlibros',app,__dirname);
 functiGetSendFile ('buscarlibros',app,__dirname);
 functiGetSendFile ('borrarlibros',app,__dirname);
 functiGetSendFile ('editarlibros',app,__dirname);
+
 
 //Funciones Libros
 functiBorrarRegistros ('libros',app,con);
@@ -63,7 +66,6 @@ functiEditar ('/editarlibros',app,con);
 
 //Rutas Socios
 functiGetSendFile('socios',app,__dirname);
-functiGetSendFile('mostrarsocios',app,__dirname);
 functiGetSendFile('buscarsocios',app,__dirname);
 functiGetSendFile ('borrarsocios',app,__dirname);
 functiGetSendFile ('editarsocios',app,__dirname);
@@ -78,9 +80,7 @@ functiEditar ('/editarsocios',app,con);
 //Rutas Prestamos
 
 functiGetSendFile('prestamos',app,__dirname);
-functiGetSendFile('mostrarprestamos',app,__dirname);
 functiGetSendFile('devolucionprestamos',app,__dirname);
-functiGetSendFile('prestamoshistoricos',app,__dirname);
 
 //Funciones prestamos
 functiBorrarRegistros ('prestamos',app,con);
@@ -96,6 +96,10 @@ app.get('/modulos/functionCreaForm.js',(req,res)=>{
 
 app.get('/modulos/functionBuscar.js',(req,res)=>{
   res.sendFile(__dirname + '/modulos/functionBuscar.js');
+});
+
+app.get('/modulos/functimostrar.js',(req,res)=>{
+  res.sendFile(__dirname + '/modulos/functimostrar.js');
 });
 
 //Servidor Iniciado
